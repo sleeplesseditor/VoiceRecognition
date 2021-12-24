@@ -4,6 +4,11 @@
 			"title": "Display",
 			"icon": "displayIcon",
 			"link": "display"
+        },
+        {
+			"title": "Draw",
+			"icon": "drawIcon",
+			"link": "draw"
         }
     ],
     "subMenus": [
@@ -16,6 +21,18 @@
                     "title": "Text Display",
                     "icon": "textIcon",
                     "link": "/"
+                }
+            ]
+        },
+        {
+            "activeMenu": "draw",
+            "backIcon": "arrowIcon",
+            "menuTitle": "Draw",
+            "menuLinks": [
+                {
+                    "title": "Shape Addition",
+                    "icon": "shapesIcon",
+                    "link": "/shape-addition"
                 }
             ]
         }

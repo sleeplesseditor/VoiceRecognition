@@ -15,8 +15,10 @@ function TextDisplay() {
         <button onClick={SpeechRecognition.startListening}>Listen</button> 
         <button onClick={SpeechRecognition.stopListening}>Stop</button>
         <button onClick={resetTranscript}>Reset</button>
-        <p>{transcript}</p>
-      </div>   
+      </div>
+      {transcript && (
+          <p className="text-display">{transcript}</p>
+      )}
     </div>
   );
 }
