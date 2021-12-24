@@ -1,22 +1,23 @@
-import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
-import './App.css';
+import * as React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Header from './components/Header/Header';
+import LazyLoader from './components/LazyLoader/LazyLoader';
+import { ReactComponent as CaretIcon } from './components/Header/Icons/caret-back-outline.svg';
+import './App.scss';
+
+import TextDisplay from './pages/TextDisplay';
+
+// const TextDisplayPage = React.lazy(() => import('./pages/TextDisplay'));
 
 function App() {
-  const {transcript, resetTranscript} = useSpeechRecognition();
-
-  if(!SpeechRecognition.browserSupportsSpeechRecognition()){
-    return null
-  }
-
   return (
-    <div className="App">
-      <h1>React Voice Recognition</h1>
-      <button onClick={SpeechRecognition.startListening}>Listen</button> 
-      <button onClick={SpeechRecognition.stopListening}>Stop</button>
-      <button onClick={resetTranscript}>Reset</button>
-      <p>{transcript}</p>
-    </div>
-  );
+    <Router>
+      <Header navIcon={<CaretIcon />} title={'React Voice Recognition'} />
+      <Routes>
+        <Route exact path="/" element={<TextDisplay />} />
+      </Routes>
+    </Router>
+  )
 }
 
 export default App;

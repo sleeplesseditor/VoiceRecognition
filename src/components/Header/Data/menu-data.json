@@ -1,0 +1,23 @@
+{
+	"menuTitles": [
+        {
+			"title": "Display",
+			"icon": "displayIcon",
+			"link": "display"
+        }
+    ],
+    "subMenus": [
+        {
+            "activeMenu": "display",
+            "backIcon": "arrowIcon",
+            "menuTitle": "Display",
+            "menuLinks": [
+                {
+                    "title": "Text Display",
+                    "icon": "textIcon",
+                    "link": "/"
+                }
+            ]
+        }
+    ]
+}
