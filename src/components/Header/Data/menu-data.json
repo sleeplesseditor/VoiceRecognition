@@ -21,6 +21,11 @@
                     "title": "Text Display",
                     "icon": "textIcon",
                     "link": "/"
+                },
+                {
+                    "title": "Language Options",
+                    "icon": "languageIcon",
+                    "link": "/language"
                 }
             ]
         },

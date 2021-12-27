@@ -7,6 +7,7 @@ import './App.scss';
 
 import TextDisplay from './pages/TextDisplay';
 import DrawShape from './pages/DrawShape';
+import LanguageOptions from './pages/LanguageOptions';
 
 // const TextDisplayPage = React.lazy(() => import('./pages/TextDisplay'));
 
@@ -17,6 +18,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<TextDisplay />} />
         <Route exact path="/shape-addition" element={<DrawShape />} />
+        <Route exact path="/language" element={<LanguageOptions />} />
       </Routes>
     </Router>
   )
